@@ -1,7 +1,7 @@
-import React, { useEffect } from "react";
-import CryptoList from "./components/CryptoList";
-import Header from "./components/Header";
-import { ButtonAdd, ButtonText } from "./components/styles";
+import React, {useEffect} from 'react';
+import CryptoList from './components/CryptoList';
+import Header from './components/Header';
+import {ButtonAdd, ButtonText} from './styles';
 
 interface Navigation {
   navigation: {
@@ -9,19 +9,16 @@ interface Navigation {
   };
 }
 
-const Home = ({ navigation }: Navigation) => {
-  return (
-    <>
-      <Header />
-      <CryptoList />
-      <ButtonAdd
-        title="AddButton"
-        onPress={() => navigation.navigate("AddCrypto")}
-      >
-        <ButtonText>+ Add a Cryptocurrency</ButtonText>
-      </ButtonAdd>
-    </>
-  );
-};
+const Home = ({navigation}: Navigation) => (
+  <>
+    <Header />
+    <CryptoList />
+    <ButtonAdd
+      title="AddButton"
+      onPress={() => navigation.navigate('AddCrypto')}>
+      <ButtonText>+ Add a Cryptocurrency</ButtonText>
+    </ButtonAdd>
+  </>
+);
 
 export default Home;

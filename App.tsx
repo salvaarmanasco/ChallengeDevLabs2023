@@ -1,7 +1,7 @@
 import React from 'react';
 // -----------------------------------------Styled Components-------------------------------------------//
 import {ThemeProvider} from 'styled-components/native';
-import THEME from './src/styles/theme';
+import theme from './src/styles/theme';
 // -----------------------------------------Navigation-------------------------------------------//
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
@@ -13,7 +13,7 @@ const Stack = createNativeStackNavigator();
 
 const App = () => {
   return (
-    <ThemeProvider theme={THEME}>
+    <ThemeProvider theme={theme}>
       <NavigationContainer>
         <Stack.Navigator
           initialRouteName="Home"
@@ -24,7 +24,6 @@ const App = () => {
         </Stack.Navigator>
       </NavigationContainer>
     </ThemeProvider>
-    // </Provider>
   );
 };
 
