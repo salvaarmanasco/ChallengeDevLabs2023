@@ -9,7 +9,6 @@ export const ButtonAdd = styled.TouchableOpacity`
 
 export const ButtonText = styled.Text`
   font-size: 16px;
-  font-weight: 400;
   margin-bottom: 6px;
   color: ${({theme}) => theme.addText};
 `;

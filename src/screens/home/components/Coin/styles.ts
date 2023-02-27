@@ -13,13 +13,13 @@ export const CryptoContainer = styled.View`
 export const ContainerNameAndSymbol = styled.View`
   align-items: flex-end;
   flex-wrap: wrap;
-  justify-self: end;
   flex: 1;
 `;
 export const ContainerPriceAndPercent = styled.View`
+  padding: 0px;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-end;
+  justify-content: flex-end;
 `;
 
 export const Name = styled.Text`
@@ -37,19 +37,14 @@ export const Symbol = styled.Text`
 export const PriceText = styled.Text`
   font-size: 16px;
   font-weight: 600;
-  margin-bottom: 6px;
   color: ${({theme}) => theme.priceText};
-`;
-
-export const Percent = styled.Text<{percent: number}>`
-  color: ${({percent, theme}) =>
-    percent > 0 ? theme.priceGreen : theme.priceRed};
 `;
 
 export const Arrows = styled.Image`
   width: 10px;
   height: 10px;
   margin-right: 5px;
+  margin-top: 7px;
   position: relative;
 `;
 
@@ -62,7 +57,6 @@ export const PercentDown = styled.Text`
   font-size: 15px;
 `;
 
-export const ArrowContainer = styled.View`
-  justify-content: center;
-  padding-bottom: 4px;
+export const PercentView = styled.View`
+  flex-direction: row;
 `;

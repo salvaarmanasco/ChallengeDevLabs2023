@@ -35,16 +35,14 @@ const CryptoArr: CoinsInfo[] = [
   },
 ];
 
-const CryptoList = () => {
-  return (
-    <View>
-      <FlatList
-        data={CryptoArr}
-        keyExtractor={({id}) => id}
-        renderItem={({item}) => <Coin item={item} />}
-      />
-    </View>
-  );
-};
+const CryptoList = () => (
+  <View>
+    <FlatList
+      data={CryptoArr}
+      keyExtractor={({id}) => id}
+      renderItem={({item}) => <Coin item={item} />}
+    />
+  </View>
+);
 
 export default CryptoList;
